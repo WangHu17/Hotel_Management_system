@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        * {
+			padding: 0;
+			margin: 0;
+		}
+		body ,html{
+			width: 100%;
+			height: 100%;
+		}
+		.container {
+			height: 80%;
+			width: 200px;
+			position: absolute;
+			top: 50%;
+			left: 10%;
+			transform: translate(-10%, -50%);
+			margin: 0 auto;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+			align-items: left;
+			cursor: pointer;
+			background: purple;
+			color: white;
+			text-align: center;
+		}
+		.container .items {
+			height: 25%;
+			width: 100%;
+
+		}
+		.container .items:nth-child(odd) {
+			background: red;
+		}
+		.pay_list_c1 {
+			width: 24px;
+			height: 18px;
+			float: left;
+			padding-top: 3px;
+			cursor: pointer;
+			text-align: center;
+			margin-right: 10px;
+			background-image: url(img/inputradio.gif);
+			background-repeat: no-repeat;
+			background-position: -24px 0;
+		}
+		.radioclass {
+			opacity: 0;
+			cursor: pointer;
+		}
+		.on {
+			background-position: 0 0;
+		}
+		.items span:first-child {
+			float: left;
+			font-size: 15px;
+			margin-top: -1px;
+		}
+		
+		.search-button{
+			width: 300px;
+			height: 30px;
+			background: white;
+			border-radius: 50px;
+			left: 50%;
+			top: 1%;
+			transform: translate(-50%,5%);
+			border: 1px solid gray;
+			background: rgba(128, 0, 128, .5);
+			position: relative;
+			cursor: pointer;
+		}
+		.search-button input {
+			width: 90%;
+			height: 100%;
+			outline: none;
+			border: none;
+			border-radius: 50px;
+			font-size: 20px;
+			margin: 0 auto;
+			display: block;
+		}
+		#body {
+			background: rgba(128, 0, 128, .1);
+		}
+		/* .content {
+			width: 100%;
+			background: pink;
+			position: relative;
+			top: 30px;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+		}
+		.content .items {
+			width: 25%;
+			height: 400px;
+			position: relative;
+			border-radius: 5px;
+		}
+		
+		.items .item-img{
+			width: 80%;
+			height: 40%;
+			left: 50%;
+			top: 0;
+			position: absolute;
+			transform: translate(-50%);
+			background: url('img/th.jpg') no-repeat 0 0;
+			background-size: cover;
+		}
+		.items .item-content {
+			height: 60%;
+			width: 80%;
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			transform: translate(-50%);
+			background: purple;
+		} */
+	</style>
+    <script type="text/javascript" src="js/jquery.js"></script>
+</head>
+
+<body id="body">
+    <div class="container">
+        <div class="items">
+            <span class="pay_list_c1 on">
+				<input type="radio" value="customerName" class="radioclass">
+			</span>
+        	<span>姓名</span>
+        </div>
+        <div class="items">
+            <span class="pay_list_c1">
+				<input type="radio" value="roomNumber" class="radioclass">
+			</span>
+        	<span>房间号</span>
+        </div>
+        <div class="items">
+            <span class="pay_list_c1">
+				<input type="radio"  value="roomType" class="radioclass">
+			</span>
+        	<span>房间类型</span>
+        </div>
+        <div class="items">
+            <span class="pay_list_c1">
+				<input type="radio"  value="orderTime" class="radioclass">
+			</span>
+        	<span>预订时间</span>
+        </div>
+        <div class="items">
+            <span class="pay_list_c1">
+				<input type="radio"  value="checkInTime" class="radioclass">
+			</span>
+        	<span>入住时间</span>
+        </div>
+        <div class="items">
+            <span class="pay_list_c1">
+				<input type="radio" value="checkOutTime" class="radioclass">
+			</span>
+        	<span>退房时间</span>
+        </div>
+        <div class="items">
+            <span class="pay_list_c1">
+				<input type="radio"  value="customerPhoneNumber" class="radioclass">
+			</span>
+        	<span>联系方式</span>
+        </div>
+        <div class="items">
+            <span class="pay_list_c1">
+				<input type="radio" value="totalMoney" class="radioclass">
+			</span>
+        	<span>总金额</span>
+        </div>
+    </div>
+
+    <div class="search-button">
+    	<input type="text" id="search" placeholder="">
+    </div>
+
+
+
+    <!-- <div class="content">
+    	<div class="items">
+    		<div class="item-img"></div>
+    		<div class="item-content"></div>
+    	</div>
+    	<div class="items">
+    		<div class="item-img"></div>
+    		<div class="item-content"></div>
+    	</div>
+    	<div class="items">
+    		<div class="item-img"></div>
+    		<div class="item-content"></div>
+    	</div>
+    	<div class="items">
+    		<div class="item-img"></div>
+    		<div class="item-content"></div>
+    	</div>
+    </div> -->
+</body>
+<script type="text/javascript">
+	$(function() {
+		var $search = $("#search");
+	    var inputValue,selectValue = "customerName";
+		function init(){
+			$search.attr('placeholder', '请输入姓名');
+			$(".pay_list_c1").on("click", function() {
+		    	selectValue = $(this).find('input').val();
+		        $(this).addClass("on").parents('.items').siblings('.items').find('.pay_list_c1').removeClass("on");
+		        var $placeholderContent = $(this).siblings('span').text();
+		        console.log($placeholderContent);
+		        $search.attr('placeholder', "请输入" + $placeholderContent);
+	    	});
+		}
+	    function getData(){
+	    	$search.on('input', function(event) {
+	    		inputValue = $(this).val();
+	    		throttle(processGet);
+	    	});
+	    }
+
+	   function throttle(method, context) {
+          context = context || window;
+          //用tId清除定时器
+          clearTimeout(method.tId);
+          //然后继续产生这个定时器
+          method.tId = setTimeout(function() {
+              //让执行上下文(这里是window)调用一下method ===>即这里的proccess
+              method.call(context); //相当于window.proccess();
+          }, 800);
+      	}
+
+      	function processGet(){
+
+      		$.ajax({
+      			url: 'SearchInfoServlet',
+      			type: 'get',
+      			dataType: 'json',
+      			data: {
+      				'orderProperty': selectValue,
+      				'SearchInfo': inputValue
+      			}
+      		})
+      		.done(function(data) {
+      			console.log(data);
+      		})
+      		.fail(function(e) {
+      			console.log(e.status);
+      		})
+      	}
+
+
+	});
+</script>
+
+</html>

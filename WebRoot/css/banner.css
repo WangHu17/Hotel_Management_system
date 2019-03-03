@@ -1,0 +1,206 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+/* 最重要的一部分，样式 */
+/* 即iframe的样式 */
+#iframe {
+	width: 100%;
+	height: 571px;
+	overflow: auto;
+}
+#iframe::-webkit-scrollbar { 
+	display: none;
+	width: 0!important;
+}
+
+
+#banner {
+	width: 100%;
+	height: 40px;
+	background: black;
+	font-size: 16px;
+	position: relative;
+	cursor: pointer;
+	color: rgba(255, 255, 255, .8);
+	line-height: 40px;
+	text-align: center;
+}
+#banner .banner-left {
+	width: 30%;
+	height: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+}
+#banner .banner-right {
+	width: 30%;
+	height: 100%;
+	text-align: right;
+	margin-right: 20px;
+}
+#banner .banner-time {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translate(-50%);
+	line-height: 40px;
+}
+#banner .search,#banner .view,#banner .find  {
+	width: 33.33%;
+	height: 100%;
+	position: relative;
+	z-index: 999;
+	border-right: 0.5px solid rgba(255, 255, 255, .5);
+}
+#banner .search:hover .word,#banner .view:hover .word,#banner .find:hover .word{
+	color: rgba(255, 255, 255, 1.0);
+}
+#banner .search i,#banner .find i{
+	font-size: 18px;
+}
+
+.triangle {
+	width: 0;
+	height: 0;
+	border-width: 5px;
+	border-color: white transparent  transparent transparent;
+	border-style: solid;
+	display: block;
+	position: absolute;
+	right: 4px;
+	top: 20px;
+}
+
+#banner .searchBtn {
+	display: none;
+	position: relative;
+	top: -1px;
+	border: .2px solid rgba(0, 0, 0, .5);
+	border-top-left-radius: 5px;
+	box-shadow: 1px 1px 1px rgba(0, 0, 0, .5);
+}
+
+
+#banner .content {
+	width: 100%;
+	height: 40px;
+	border: .1px solid rgba(0, 0, 0, .1);
+	transition: all .5s;
+	background: black;
+	color: white;
+} 
+#banner .content:hover{
+	background: white;
+	color: black;
+}
+
+#banner .content i {
+	margin-right: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+  <servlet>
+    <servlet-name>loginServlet</servlet-name>
+    <servlet-class>servlet.loginServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>checkinServlet</servlet-name>
+    <servlet-class>servlet.checkinServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>SearchByTime</servlet-name>
+    <servlet-class>servlet.SearchByTime</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>leaveServlet</servlet-name>
+    <servlet-class>servlet.leaveServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>arriveServlet</servlet-name>
+    <servlet-class>servlet.arriveServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>getPriceServlet</servlet-name>
+    <servlet-class>servlet.getPriceServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>timeExtensionServlet</servlet-name>
+    <servlet-class>servlet.getPriceServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>TimeExtensionServlet</servlet-name>
+    <servlet-class>servlet.TimeExtensionServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>FindViewServlet</servlet-name>
+    <servlet-class>servlet.FindViewServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SearchInfoServlet</servlet-name>
+    <servlet-class>servlet.SearchInfoServlet</servlet-class>
+  </servlet>
+
+
+
+
+
+
+
+
+
+
+  <servlet-mapping>
+    <servlet-name>loginServlet</servlet-name>
+    <url-pattern>/loginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>checkinServlet</servlet-name>
+    <url-pattern>/checkinServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SearchByTime</servlet-name>
+    <url-pattern>/SearchByTime</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>leaveServlet</servlet-name>
+    <url-pattern>/leaveServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>arriveServlet</servlet-name>
+    <url-pattern>/arriveServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>getPriceServlet</servlet-name>
+    <url-pattern>/getPriceServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>timeExtensionServlet</servlet-name>
+    <url-pattern>/timeExtensionServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>TimeExtensionServlet</servlet-name>
+    <url-pattern>/TimeExtensionServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>FindViewServlet</servlet-name>
+    <url-pattern>/FindViewServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SearchInfoServlet</servlet-name>
+    <url-pattern>/SearchInfoServlet</url-pattern>
+  </servlet-mapping>
+  
+  <filter>
+  	<filter-name>CharactorFilter</filter-name>
+  	<filter-class>servlet.CharactorFilter</filter-class>
+  	<init-param>
+  		<param-name>encoding</param-name>
+  		<param-value>utf-8</param-value>
+  	</init-param>
+  </filter>
+  
+  <filter-mapping>
+  	<filter-name>CharactorFilter</filter-name>
+  	<url-pattern>/*</url-pattern>
+  </filter-mapping>
+  
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>

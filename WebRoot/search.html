@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        * {
+			padding: 0;
+			margin: 0;
+		}
+		body,html {
+			width: 100%;
+			height: 100%;
+			font-size: 14px;
+			position: relative;
+		}
+		.main-left {
+			float: left;
+			width: 20%;
+			height: 100%;
+			position: relative;
+			left: 5%;
+		}
+		.container {
+			width: 200px;
+			border: .4px solid rgba(0, 0, 0, .5);
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			border-radius: 5px;
+			box-shadow: .5px .5px 3px gray;
+			cursor: pointer;
+		}
+		.container .items {
+			width: 100%;
+			line-height: 35px;
+			position: relative;
+			border-bottom: .3px solid rgba(0, 0, 0, .5);
+		}
+		
+		.items .items-word {
+			margin-left: 50px;
+			color: purple;
+		}
+		.triangle {
+			width: 0;
+			height: 0;
+			display: block;
+			border-width: 6px;
+			border-style: solid;
+			border-color: purple transparent transparent transparent;
+			position: absolute;
+			left: 25px;
+			top: 15px;
+		}
+		.items .content {
+			margin-left: 50px;
+			position: relative;
+		}
+		input[type=radio] {
+			display: none;
+		}
+		.radio {
+			background: url('img/inputradio.gif') no-repeat -27px -1px;
+			width: 17px;
+			height: 16px;
+			position: absolute;
+			display: block;
+			left: -28px;
+			top: 10.5px;
+		}
+		.on {
+			background: url('img/inputradio.gif') no-repeat -3px 0;
+			width: 17px;
+			height: 18px;
+		}
+		.main-right {
+			width: 75%;
+			background: pink;
+			float: right;
+			position: relative;
+		}
+		.main-left .title {
+			position: absolute;	
+			left: 20%;
+			top: 12px;
+		}
+		.main-right {
+			margin-top: 0;
+		}
+		.main-right .orderData {
+			width: 85%;
+			height: 150px;
+			background: deeppink;
+		}
+	</style>
+    <script type="text/javascript" src="js/jquery.js"></script>
+</head>
+
+<body>
+    <div class="main-left">
+    	<h2 class="title">订单查询</h2>
+        <div class="container">
+            <div class="items">
+                <span class="triangle"></span>
+                <span class="items-word">姓名</span>
+                <div class="content">
+                    <i class="radio"><input type="radio" value="customerName"></i>姓名
+                </div>
+            </div>
+            <div class="items">
+                <span class="items-word">房间</span>
+                <div class="content">
+                    <i class="radio"><input type="radio" value="roomNumber"></i>房间号
+                </div>
+                <div class="content">
+                    <i class="radio"><input type="radio" value="roomType"></i>房间类型
+                </div>
+                <span class="triangle"></span>
+            </div>
+            <div class="items">
+                <span class="triangle"></span>
+                <span class="items-word">时间</span>
+                <div class="content">
+                    <i class="radio"><input type="radio" value="checkInTime"></i>入住时间
+                </div>
+                <div class="content">
+                    <i class="radio"><input type="radio"></i>退房时间
+                </div>
+                <div class="content">
+                    <i class="radio"><input type="radio" value="orderTime"></i>预订时间
+                </div>
+                <div class="content">
+                    <i class="radio"><input type="radio" value="checkOutTime"></i>退房时间
+                </div>
+            </div>
+            <div class="items">
+                <span class="triangle"></span>
+                <span class="items-word">联系方式</span>
+                <div class="content">
+                    <i class="radio"><input type="radio" value="customerPhoneNumber"></i>联系方式
+                </div>
+            </div>
+            <div class="items">
+                <span class="triangle"></span>
+                <span class="items-word">金额</span>
+                <div class="content">
+                    <i class="radio"><input type="radio" value="totalMoney"></i>金额
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-right">
+    	<div class="orderData"></div>
+    	<div class="orderData"></div>
+    	<div class="orderData"></div>
+    	<div class="orderData"></div>
+    </div>
+</body>
+<script type="text/javascript">
+$(function() {
+    var $radio = $(".items .content i");
+    $radio.on('click', function(event) {
+        $(this).addClass('on');
+        $(this).parents('.content').siblings().find('i').removeClass('on');
+        $(this).parents('.items').siblings().find('.content i').removeClass('on');
+    });
+});
+</script>
+
+</html>

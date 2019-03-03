@@ -1,0 +1,251 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+i{
+	display: inline-block;
+}
+h2{
+	margin-top: 50px;
+	margin-left: 170px;
+}
+.nav{
+	width: 170px;
+	height: 67px;
+	border: 1px solid #DDDDDD;
+	text-align: center;
+	line-height: 65px;
+	font-size: 16px;
+	font-weight: bold; 
+	position: relative;
+	cursor: default;
+	box-sizing: border-box;
+	padding-left: 50px;
+}
+.client_nav{
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	left: 170px;
+	top: 10px;
+}
+.client_nav_after{
+	position: absolute;
+	left: 332px;
+	top: 128px;
+	width: 15px;
+	height: 15px;
+	transform: rotate(45deg);
+	background: #F3F5F7;
+	border-top: 1px solid #DDDDDD;
+	border-right: 1px solid #DDDDDD;
+}
+.user_icon{
+	width: 40px;
+	height: 43px;
+	background: url('../img/client.png') no-repeat 0 0;
+	background-size: 100% 100%;
+	position: absolute;
+	left: 25px;
+	top: 10px;
+}
+.finish{
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	left: 170px;
+	top: 9px;
+}
+.finish_after{
+	position: absolute;
+	left: 332px;
+	top: 192px;
+	width: 15px;
+	height: 15px;
+	transform: rotate(45deg);
+	background: #F3F5F7;
+	border-top: 1px solid #DDDDDD;
+	border-right: 1px solid #DDDDDD;
+	display: none;
+}
+.finish_icon{
+	width: 37px;
+	height: 37px;
+	background: url('../img/finish.png') no-repeat 0 0;
+	background-size: 100% 100%;
+	position: absolute;
+	left: 25px;
+	top: 13px;
+}
+.selected{
+	background: #F3F5F7;
+	color: #4583BE;
+}
+.content{
+	width: 830px;
+	position: absolute;
+	left: 465px;
+	top: 95px;
+	font-size: 15px;
+	font-weight: bold;
+}
+.line{
+	width: 830px;
+	height: 1px;
+	margin-top: 3px;
+	margin-bottom: 22px;
+	border-top: 1.2px solid #DDDDDD;
+}
+.box{
+	width: 300px;
+	height: 40px;
+	border: 1.1px solid #DDDDDD;
+	border-radius: 3px;
+	margin-top: 17px;
+	margin-right: 15px;
+	font-size: 18px;
+	position: relative;
+	box-sizing: border-box;
+	padding-left: 10px;
+}
+.id{
+	width: 400px;
+	letter-spacing: 3px;
+}
+.sure{
+	display: block;
+	width: 100px;
+	height: 35px;
+	background: #E0E1E3;
+	border: none;
+	outline: none;
+	border-radius: 4px;
+	margin-top: 17px;
+	color: #5D5D5D;
+	font-size: 14px;
+	font-weight: bold;
+	letter-spacing: 8px;
+	text-align: center;
+	padding-left: 7px;
+	cursor: pointer;
+}
+.content2{
+	display: none;
+	top: 75px;
+}
+.content2 h4:nth-child(n+2){
+	margin-top: 30px;
+}
+.title3{
+	margin-top: 15px;
+}
+.title h5:nth-child(1){
+	float: left;
+	margin-right: 265px;
+}
+.status{
+	width: 200px;
+}
+.room_num{
+	width: 200px;
+}
+.cost{
+	width: 200px;
+}
+.reserve_num{
+	width: 200px;
+}
+
+.ex_num{
+	width: 150px;
+	margin-left: 20px;
+}
+.ex_days{
+	width: 150px;
+	margin-left: 35px;
+}
+.price{
+	width: 150px;
+	height: 40px;
+	margin-top: 17px;
+	margin-left: 25px;
+	border: none;
+	border-bottom: 1.1px solid #DDDDDD;
+}
+.sure1{
+	float: left;
+}
+.submit{
+	float: left;
+	margin-left: 30px;
+}
+.content1 h4{
+	font-size: 17px;
+}
+.content1 .title1{
+	margin-top: 20px;
+}
+.title1 h5{
+	float: left;
+	font-size: 15px;
+	margin-right: 145px;
+}
+.order_num{
+	width: 110px;
+	margin-left: 20px;
+	margin-top: 20px;
+}
+.content3{
+	margin-top: 30px;
+	display: none;
+}
+.newExpiryTime{
+	width: 200px;
+}
+.oldExpiryTime{
+	width: 200px;
+}
+
+.content4{
+	top: 65px;
+}
+.content4 h4{
+	font-size: 17px;
+}
+.content4 h4:nth-child(n+2){
+	margin-top: 30px;
+}
+.content4 input{
+	margin-left: 15px;
+}
+.content4 .sure{
+	margin-left: 0;
+}
+.content4 div .sure{
+	float: left;
+	margin-right: 30px;
+}
+.name{
+	width: 150px;
+	margin-left: 45px!important;
+}
+.bz{
+	margin-left: 45px!important;
+}
+.arriveTime{
+	width: 185px;
+}
+.leaveTime{
+	width: 185px;
+}
+.reserveRoomNum{
+	width: 185px;
+}
+.reserveRoomType{
+	width: 185px;
+}
+.emptyRoomBox{
+	display: none;
+	margin-top: 20px;
+}
+.emptyRoomBox input:nth-child(1){
+	margin-top: 10px;
+}
